@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Telemetry: Super Scalar</title>
+
+	<script type="text/javascript" src="d3/d3.v2.js"></script>
+	<script type="text/javascript" src="d3/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="d3/lib/jquery-ui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="jquery.hotkeys.js"></script>
+	<script type="text/javascript" src="loadResource.js"></script>
+	<script type="text/javascript" src="timer.js"></script>
+	<script type="text/javascript" src="util.js"></script>
+	<script type="text/javascript" src="objectif-lune.js"></script>
+
+	
+	<link type="text/css" rel="stylesheet" href="reset.css" />
+	<link type="text/css" rel="stylesheet" href="style.css" />
+	
+	<link href='http://fonts.googleapis.com/css?family=Bitter:400italic,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	
+</head>
+
+<body>
+<div class="notice-area" id="notice-area"></div>
+	
+
+
+<div class="container">
+	
+	<h1>Space Walk Telemetry: Super Scalar</h1>
+	<hr />
+	<p>
+		This is the client side of the moon, working in concert with the server component. It uses websockets for communication and should facitilate debugging and tweaking of games and other interactive applications alike.
+	</p>
+	
+	<!-- ========================= SCALAR DATA =========================== -->
+	<h2><a name="scalar">Scalar Data</a></h2>
+	<hr />
+	<p>
+		Visualisation of scalar data points. Click a tile to highlight it!
+	</p>
+	<p>
+		<span class="rounded-inline" id="clearScalar">clear scalar values!</span>
+	</p>
+	<div style="clear: both"></div>
+
+	<div id="scalar" class="scalar"></div>
+	<div style="clear: both;"></div>
+
+</body>
+</html>
