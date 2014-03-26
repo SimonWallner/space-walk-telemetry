@@ -61,7 +61,7 @@ div.container {
 h1, h2 {
 	font-size: 3.5em;
 	font-weight: 700;
-	margin-top: 0.5em;
+	// margin-top: 0.5em;
 	margin-bottom: 0.2em;
 	color: #E8E8E8;
 }
@@ -80,80 +80,6 @@ hr {
 	background-color: #E8E8E8;
 }
 
-div.notice-area {
-	width: 300px;
-	position: fixed;
-	top: 10px;
-	left:50%;
-	margin-left: -150px;
-	color: #fff;
-	text-align: center;
-	vertical-align: center;
-	font-family: 'Open Sans';
-	font-weight: 700;
-}
-
-div.notice-area div {
-	border-radius: 10px;
-	padding: 10px;
-	margin: 3px;
-}
-
-div.notice-area div.notice {
-	background-color: #88BEE2;
-}
-
-div.notice-area div.warning {
-	background-color: #D8C53D;
-}
-
-span.connection {
-	background-color: $dark2;
-}
-span.connection span.active {
-	background-color: $white1;
-	color: $dark;
-}
-
-#autoConnect {
-	border-radius: 1em;
-	padding: 3px 7px 3px 7px;
-	margin-left: -7px;
-}
-
-#disconnect{
-	border-radius: 1em;
-	padding: 3px 7px 3px 7px;
-	margin-right: -7px;
-}
-
-#connectionStatus {
-	text-align: center;
-/*	line-height: 3em;*/
-	border-radius: 1em;
-	font-family: 'Open Sans';
-	font-weight: 700;
-}
-#connectionStatus.connected {
-	background-color: $green;
-}
-#connectionStatus.connecting {
-	background-color: $yellow;
-}
-#connectionStatus.disconnected {
-	background-color: $red;
-}
-
-div.log {
-	margin-top: 1em;
-	font-weight: 400;
-}
-div.log div {
-	margin-top: 2px;
-	background-color: #3F3F3F;
-	border-radius: 2px;
-	padding: 2px 3px 2px 3px;
-}
 
 /* FIXME: div.sessionMarker not enough for the log section??? */
 div.sessionMarker, #log div.sessionMarker {
@@ -166,39 +92,6 @@ div.sessionMarker, #log div.sessionMarker {
 	padding: 2px 3px 2px 3px
 }
 
-
-div.trace { color: #C5DDEA; }
-div.debug { color: #A6D0E8; }
-div.info { color: #88BEE2; }
-div.warn { color: #D8C53D; }
-div.error { color: #D8782A; }
-div.fatal { color: #B72C2C; }
-
-.trace-back { background-color: #C5DDEA; }
-.debug-back { background-color: #A6D0E8; }
-.info-back { background-color: #88BEE2; }
-.warn-back { background-color: #D8C53D; }
-.error-back { background-color: #D8782A; }
-.fatal-back { background-color: #B72C2C; }
-
-.trace-border { border-color: #C5DDEA; }
-.debug-border { border-color: #A6D0E8; }
-.info-border { border-color: #88BEE2; }
-.warn-border { border-color: #D8C53D; }
-.error-border { border-color: #D8782A; }
-.fatal-border { border-color: #B72C2C; }
-
-div.cube {
-	width: 65px;
-	height: 65px;
-	border-radius: 14px;
-	margin-right: 14px;
-	float: left;
-}
-
-div.cube:last-child {
-	margin-right: 0px;
-}
 
 #clearLog, #clearScalar, div.clearData {
 	background-color: #B72C2C;
@@ -223,15 +116,6 @@ span.lines {
 #lineCounter {
 	background-color: #E8E8E8;
 	margin-left: -7px;
-}
-
-input {
-	background-color: #3F3F3F;
-	color: #E8E8E8;
-	border: none;
-	font-family: 'Bitter';
-	font-weight: 700;
-	width: 300px;
 }
 
 button {
@@ -309,180 +193,6 @@ div.highlighted {
 }
 
 
-/* time series data */
-div.plot {
-	width: 444px;
-/*	height: 134px;*/
-	margin-top: 5px;
-	background-color: #3F3F3F;
-	border-radius: 0.5em;
-	padding: 8px;
-	overflow: hidden;
-}
-
-div.plot svg {
-	margin-top: 0.5em;
-	margin-bottom: -5px; 
-	clear: both;
-}
-
-span.right {
-	float: right;
-}
-span.updateInterval, span.bufferLength, span.logLin {
-	border-radius: 1em;
-	padding: 3px 7px 3px 7px;
-	background-color: #333;
-	margin-right: 0.5em;
-	span {
-		background-color: #333;
-		border-radius: 1em;
-		padding: 3px 7px 3px 7px;
-		color: #E8E8E8;
-	}
-	span.active {
-		background-color: #E8E8E8;
-		color: #333;
-	}
-	:first-child {
-		margin-left: -7px;
-	}
-	:last-child {
-		margin-right: -7px;
-	}
-}
-
-div.dataButtons {
-	margin-top: 0.8em;
-}
-
-
-/* === variables tweaking === */
-#float-variables {
-	div.variable {
-		width: 100%;
-		background-color: #3F3F3F;
-		border-radius: 0.5em;
-		padding: 8px;
-		margin-top: 5px;
-		
-		div.title {
-			color: $blue3;
-		}
-		
-		span {
-			display: block;
-		}
-		
-		span.min, span.max  {
-			width: 20%;
-			float: left;
-			padding-top: 1em;
-			
-		}
-		
-		span.value {
-			width: 60%;
-			float: left;
-			text-align: center;
-			font-size: 2em;
-		}
-		
-		span.max {
-			text-align: right;
-		}
-	}
-}
-
-/* === variables tweaking === */
-#state {
-	width: 100%;
-	background-color: #3F3F3F;
-	border-radius: 0.5em;
-	padding: 8px;
-	margin-top: 5px;
-	
-	div.title {
-		color: $blue3;
-	}
-	
-	span {
-		display: inline-block;
-	}
-	
-	span.min, span.max  {
-		width: 20%;
-		float: left;
-		padding-top: 1em;
-		font-family: 'PT Mono'
-	}
-	
-	span.value {
-		width: 60%;
-		float: left;
-		text-align: center;
-		font-size: 2em;
-		font-family: 'PT Mono'
-	}
-	
-	span.max {
-		text-align: right;
-	}
-
-	#state-controls {
-		margin-top: 0.8em;
-	}
-	span.transport-button {
-		border-radius: 3px;
-		background-color: $white3;
-		color: $dark;
-		min-width: 1em;
-		text-align: center;
-		font-weight: 900;
-		font-family: 'Entypo';
-		font-size: 2em;
-	}
-
-	span.active {
-		background-color: $orange;
-	}
-}
-
-
-#footer {
-	margin-top: 1em, auto, 1em, auto;
-	font-size: 0.8em;
-	color: $white3;
-	padding: 1em;
-}
-
-.ui-slider {
-	height: 0.1em;
-	margin-top: 0.5em;
-	margin-bottom: 1em;
-
-	.ui-slider-handle {
-		width: 0.6em;
-		height: 1em;
-		color: $white1;
-		font-size: 2em;
-		background: none;
-		text-align: center;
-		border: none;
-		text-decoration: none;
-
-		&:before {
-			content: '\2666';
-		}
-	}
-}
-
-.ui-slider-horizontal {
-	.ui-slider-handle {
-		top: -0.65em;
-		margin-left: -0.3em; // half the width
-	}
-}
 
 
 /* =========================== SVG styles ============================== */
