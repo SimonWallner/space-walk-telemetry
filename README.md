@@ -1,4 +1,3 @@
-space-walk-telemetry
-====================
+# Space Walk Telemetry
 
-space walk telemetry
+A telemetry plugin for Space Walk
