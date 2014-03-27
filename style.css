@@ -16,7 +16,7 @@
 
 body {
   background-color: #333;
-  font-size: 13px;
+  font-size: 16px;
   font-family: 'Bitter';
   font-weight: 400;
   color: #E8E8E8;
@@ -25,7 +25,7 @@ body {
 
 div.container {
   width: 460px;
-  margin-left: 50px;
+  margin-left: 1em;
   /*	margin: 0px auto 0px auto;*/ }
 
 h1, h2 {
