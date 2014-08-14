@@ -109,10 +109,6 @@ libsw.onSessionStarted = function() {
 	sessionID++;
 	
 	// post new session
-	d3.select('#log').append('div')
-		.attr('class', 'sessionMarker')
-		.text('new session started...');
-	
 	d3.select('#scalar').append('div')
 		.attr('class', 'sessionMarker')
 		.text('new session started...')

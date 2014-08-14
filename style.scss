@@ -69,6 +69,7 @@ hr {
 div.log {
 	margin-top: 1em;
 	font-weight: 400;
+	font-family: 'Bitter'
 }
 div.log div {
 	margin-top: 2px;
@@ -111,11 +112,18 @@ div.fatal { color: #B72C2C; }
 .fatal-border { border-color: #B72C2C; }
 
 div.cube {
+	box-sizing: border-box;
 	width: 65px;
 	height: 65px;
 	border-radius: 14px;
 	margin-right: 14px;
 	float: left;
+	text-align: center;
+	padding-top: 1.5em;
+	padding-left: 0.1em;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: #fff;
 }
 
 div.cube:last-child {
@@ -169,6 +177,7 @@ div.scalar {
 	margin-bottom: 1em;
 	font-family: 'Bitter';
 	color: #fff;
+	font-size: 13px;
 }
 
 div.data {

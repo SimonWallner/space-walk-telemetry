@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Objectif Lune Client</title>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="http://spacewalk.simonwallner.at/app/lib-space-walk.js"></script>
+	<script type="text/javascript" src="logger.js"></script>
+	
+	<link type="text/css" rel="stylesheet" href="http://spacewalk.simonwallner.at/app/css/reset.css">
+	<link type="text/css" rel="stylesheet" href="http://spacewalk.simonwallner.at/app/css/base.css">
+	<link type="text/css" rel="stylesheet" href="style.css">
+	
+	<link href='http://fonts.googleapis.com/css?family=Bitter:400italic,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+	
+</head>
+
+<body>
+<div class="notice-area" id="notice-area"></div>
+	
+
+
+<div class="container">
+	
+	<!-- ========================== LOGGER =============================== -->
+	<h1><a name="logger">Logger</a></h1>
+	<hr />
+	<p>
+		Filter and highlight log messages.
+	</p>
+	<div style="height:65px; margin-top: 1em; margin-bottom: 1em;">
+		<div class="cube trace-back" id="toggleTrace">trc</div>
+		<div class="cube debug-back" id="toggleDebug">dbg</div>
+		<div class="cube info-back" id="toggleInfo">info</div>
+		<div class="cube warn-back" id="toggleWarn">warn</div>
+		<div class="cube error-back" id="toggleError">err</div>
+		<div class="cube fatal-back" id="toggleFatal">fatal</div>
+	</div>
+	<div style="clear: both;"></div>
+	
+	<span class="lines rounded-inline">
+		<span id="lineCounter" class="rounded-inline">--</span> lines logged
+	</span>&nbsp;
+	<span class="rounded-inline" id="clearLog">clear log!</span>
+		
+	<div class="log" id="log"></div>
+</div>
+
+</body>
+</html>
