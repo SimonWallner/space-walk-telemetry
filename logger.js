@@ -31,7 +31,7 @@ function nextShowState(state) {
 }
 	
 libsw.onMessage = function(data) {
-	if (data.type === 'log') {
+	if (data.type === 'core.simpleLog.message') {
 		addLog(data.payload);
 		d3.select('#lineCounter')
 			.text(logData.length);
