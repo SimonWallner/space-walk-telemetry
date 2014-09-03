@@ -40,7 +40,7 @@ var y = d3.scale.linear()
 libsw.onSessionStarted = function() {}
 	
 libsw.onMessage = function(data) {
-	if (data.type == 'data') {
+	if (data.type == 'core.simpleTelemetry.sample') {
 		var pl = data.payload
 		var entry = timeSeriesData[pl.name];
 		
