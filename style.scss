@@ -51,13 +51,14 @@ h1, h1 {
 }
 
 div.container {
-	width: 460px;
+	// width: 460px;
 	padding: 1em;
 }
 
 p {
 	color: #E8E8E8;
 	margin-top: 1em;
+	width: 460px;
 }
 
 hr {
@@ -246,12 +247,13 @@ div.highlighted {
 /* time series data */
 div.plot {
 	width: 444px;
-/*	height: 134px;*/
 	margin-top: 5px;
+	margin-right: 5px;
 	background-color: #3F3F3F;
 	border-radius: 0.5em;
 	padding: 8px;
-	overflow: hidden;
+	// overflow: hidden;
+	display: inline-block;
 }
 
 div.plot svg {
