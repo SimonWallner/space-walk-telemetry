@@ -19,21 +19,21 @@ libsw.onMessage = function(data) {
 	if (data.type === 'scalar') {
 		var scalar = data.payload;
 		var entry = scalarData[scalar.name];
-		
+
 		if (entry) { // scalar is already known
 			entry.value = scalar.value;
-			
+
 			var sessionDiv = d3.select('#scalar-session-' + sessionID);
-			
+
 			sessionDiv.select('#scalar-' + entry.id + ' div.value')
 				.text(round(scalar.value, 2))
-			
+
 			if (scalar.value < entry.min) {
 				entry.min = scalar.value;
 				sessionDiv.select('#scalar-' + entry.id + ' span.minValue')
 					.text(round(entry.min, 2))
 			}
-			
+
 			if (scalar.value > entry.max) {
 				entry.max = scalar.value
 				sessionDiv.select('#scalar-' + entry.id + ' span.maxValue')
@@ -48,7 +48,7 @@ libsw.onMessage = function(data) {
 				id: scalarID++,
 				highlighted: false
 			};
-			
+
 			var tile = d3.select('#scalar-session-' + sessionID).append('div')
 				.attr('class', 'tile')
 				.attr('id', 'scalar-' + entry.id)
@@ -59,10 +59,10 @@ libsw.onMessage = function(data) {
 				.attr('class', 'value')
 				.text(round(scalar.value, 2));
 			tile.append('hr');
-			
-			
+
+
 			var min = tile.append('div')
-				.attr('class', 'minMax')			
+				.attr('class', 'minMax')
 			min.append('span')
 				.attr('class', 'label')
 				.text('min');
@@ -70,8 +70,8 @@ libsw.onMessage = function(data) {
 			min.append('span')
 				.attr('class', 'minValue')
 				.text(round(entry.min, 2));
-			
-			
+
+
 			var max = tile.append('div')
 				.attr('class', 'minMax')
 			max.append('span')
@@ -81,11 +81,11 @@ libsw.onMessage = function(data) {
 			max.append('span')
 				.attr('class', 'maxValue')
 				.text(round(entry.min, 2));
-				
+
 			// make it clickable
 			$('#scalar-' + entry.id).click(function() {
 				entry.highlighted = !entry.highlighted;
-				
+
 				if (entry.highlighted) {
 					d3.select('#scalar-' + entry.id)
 						.attr('class', 'tile highlighted')
@@ -93,7 +93,7 @@ libsw.onMessage = function(data) {
 				else {
 					d3.select('#scalar-' + entry.id)
 						.attr('class', 'tile')
-				}			
+				}
 			})
 		}
 	}
@@ -104,10 +104,10 @@ libsw.onSessionStarted = function() {
 	d3.select('#scalar-session-' + (sessionID))
 		.transition().duration(500)
 			.style('opacity', 0.5)
-			
+
 	// new session
 	sessionID++;
-	
+
 	// post new session
 	d3.select('#scalar').append('div')
 		.attr('class', 'sessionMarker')
@@ -136,15 +136,15 @@ function newSessionStarted() {
 	d3.select('#scalar-session-' + (sessionID))
 		.transition().duration(500)
 			.style('opacity', 0.5)
-			
+
 	// new session
 	sessionID++;
-	
+
 	// post new session
 	d3.select('#log').append('div')
 		.attr('class', 'sessionMarker')
 		.text('new session started...');
-	
+
 	d3.select('#scalar').append('div')
 		.attr('class', 'sessionMarker')
 		.text('new session started...')
@@ -159,7 +159,7 @@ function toggleCube(state, name, cls) {
 			.transition()
 				.duration(200)
 				.style('opacity', 1);
-				
+
 		d3.selectAll('div.log div.' + cls)
 			.style('opacity', 1)
 			.style('display', 'block');
@@ -169,36 +169,37 @@ function toggleCube(state, name, cls) {
 			.transition()
 				.duration(200)
 				.style('opacity', 0.5);
-		
+
 		d3.selectAll('div.log div.' + cls)
 			.style('opacity', 0.5)
 			.style('display', 'block');
 	}
-	
+
 	else if (state === showState.hide) {
 		d3.select(name)
 			.transition()
 				.duration(200)
 				.style('opacity', 0.1);
-				
+
 		d3.selectAll('div.log div.' + cls)
 			.style('opacity', 0.1)
 			.style('display', 'none');
 	}
 }
 
-function init() {	
+function init() {
 	var clearScalar = function() {
 		scalarData = [];
-		
+
 		d3.selectAll('div.scalar div')
 			.remove();
-		
+
 		d3.select('#scalar').append('div')
 			.attr('id', 'scalar-session-' + sessionID)
 	}
 	$('#clearScalar').click(clearScalar);
-	
+
+    newSessionStarted();
 }
 
 
