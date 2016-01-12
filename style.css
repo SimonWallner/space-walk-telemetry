@@ -348,7 +348,7 @@ g.xAxis path, g.yAxis path {
   shape-rendering: crispEdges; }
 g.xAxis text, g.yAxis text {
   fill: #d1d1d1;
-  font-size: 0.8em; }
+  font-size: 0.6em; }
 
 line {
   stroke: #666666;

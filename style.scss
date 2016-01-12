@@ -258,7 +258,7 @@ div.plot {
 
 div.plot svg {
 	margin-top: 0.5em;
-	margin-bottom: -5px; 
+	margin-bottom: -5px;
 	clear: both;
 }
 
@@ -302,29 +302,29 @@ div.dataButtons {
 		border-radius: 0.5em;
 		padding: 8px;
 		margin-top: 5px;
-		
+
 		div.title {
 			color: $blue3;
 		}
-		
+
 		span {
 			display: block;
 		}
-		
+
 		span.min, span.max  {
 			width: 20%;
 			float: left;
 			padding-top: 1em;
-			
+
 		}
-		
+
 		span.value {
 			width: 60%;
 			float: left;
 			text-align: center;
 			font-size: 2em;
 		}
-		
+
 		span.max {
 			text-align: right;
 		}
@@ -338,22 +338,22 @@ div.dataButtons {
 	border-radius: 0.5em;
 	padding: 8px;
 	margin-top: 5px;
-	
+
 	div.title {
 		color: $blue3;
 	}
-	
+
 	span {
 		display: inline-block;
 	}
-	
+
 	span.min, span.max  {
 		width: 20%;
 		float: left;
 		padding-top: 1em;
 		font-family: 'PT Mono'
 	}
-	
+
 	span.value {
 		width: 60%;
 		float: left;
@@ -361,7 +361,7 @@ div.dataButtons {
 		font-size: 2em;
 		font-family: 'PT Mono'
 	}
-	
+
 	span.max {
 		text-align: right;
 	}
@@ -423,7 +423,7 @@ path {
 	stroke-width: 2px;
 }
 
-g.xAxis, g.yAxis { 
+g.xAxis, g.yAxis {
 	path {
 		stroke: $grey;
 		stroke-width: 1px;
@@ -431,7 +431,7 @@ g.xAxis, g.yAxis {
 	}
 	text {
 		fill: $white3;
-		font-size: 0.8em;
+		font-size: 0.6em;
 	}
 }
 
